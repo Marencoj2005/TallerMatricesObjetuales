@@ -36,8 +36,7 @@ public class main {
                     System.out.println(" [1] Si | [2] No");
                     option2 = Integer.parseInt(System.console().readLine());
                     if (option2 == 1){
-
-                        punto1.mostrarDatos(punto1.CrearSegundoInventarioYSumar(almacen));
+                        punto1.mostrarDatos(punto1.CrearSegundoInventarioYSumar(almacen)); //ingreso la primera matriz
                     }
                     break;
                 case 2:

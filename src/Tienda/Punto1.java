@@ -10,16 +10,19 @@ public class Punto1 {
         Tienda[][] tienda = metodo.crearYLlenarMatriz(dimension);
         return tienda;
     }
-    public void mostrarDatos(Tienda[][] almacen){
+    public void mostrarDatos(Tienda[][] m){
         Metodos metodo = new Metodos();
-        metodo.mostrarMatriz(almacen);
+        metodo.mostrarMatriz(m);
     }
     public Tienda[][] CrearSegundoInventarioYSumar(Tienda[][] tienda1){
         System.out.println("Ingrese la dimensión de la matriz");
         int dimension = Integer.parseInt(System.console().readLine());
         Metodos metodo = new Metodos();
-        Tienda[][] tienda2 = metodo.crearYLlenarMatriz(dimension);
+        Tienda[][] tienda2 = metodo.crearYLlenarMatriz(dimension); //se llena la segunda tienda
+        System.out.println("Matriz2");
         metodo.mostrarMatriz(tienda2);
-        return metodo.fusionarTiendas(tienda1, tienda2);
+        System.out.println("Matriz Aumentada");
+        Tienda[][] matrizAumentada = metodo.fusionarTiendas(tienda1, tienda2);
+        return matrizAumentada;
     }
 }
