@@ -8,8 +8,7 @@ public class main {
         System.out.println("BIENVENIDO AL INVENTARIO DE LA TIENDA PAQUITA LA DEL BARRIO");
         System.out.println("Seleccione la opción que desea ejecutar:");
         System.out.println("1. Ingresar y mostrar datos");
-        System.out.println("2. Mostrar Cantidad Total de Productos");
-        System.out.println("3. Salir");
+        System.out.println("2. Mostrar Cantidad Total de Productos (sumar)");
         Tienda[][] almacen = new Tienda[0][0];
         boolean continuar = true;
         int option = Integer.parseInt(System.console().readLine());
@@ -24,11 +23,22 @@ public class main {
                     System.out.println("¿Desea continuar?");
                     System.out.println(" [1] Si | [2] No");
                     int option2 = Integer.parseInt(System.console().readLine());
-                    if (option2 == 2) {continuar = false;}
+                    if (option2 == 2) {
+                        continuar = false;
+                    }
                     System.out.println("Desea vel la cantidad total de productos en el inventario?");
                     System.out.println(" [1] Si | [2] No");
                     option2 = Integer.parseInt(System.console().readLine());
-                    if (option2 == 1) {option = 2;}
+                    if (option2 == 1) {
+                        option = 2;
+                    }
+                    System.out.println("¿Desea agregar una inventario nuevo y guardar todo en un solo inventario?");
+                    System.out.println(" [1] Si | [2] No");
+                    option2 = Integer.parseInt(System.console().readLine());
+                    if (option2 == 1){
+
+                        punto1.mostrarDatos(punto1.CrearSegundoInventarioYSumar(almacen));
+                    }
                     break;
                 case 2:
                     Punto2 punto2 = new Punto2();
